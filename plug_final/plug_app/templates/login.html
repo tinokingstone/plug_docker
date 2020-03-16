@@ -1,0 +1,56 @@
+{% extends "layout.html" %}
+{% block content %}
+
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='landing.css') }}">
+
+
+		<div id="sign_up_form_cont">
+			<div id="sign_up_form" >
+				<form method='POST' action=''>
+									       {{ form.hidden_tag() }}
+
+
+											<div class="header_txt">
+												{{ form.email.label(class="") }}
+											</div>	
+
+											<div class="signup_form_txt_field_cont">
+												{{ form.email(class="") }}
+											</div>
+								                {% if form.email.errors %}
+								                    <div class='error'>
+								                        {% for error in form.email.errors %}
+								                            <span>{{ error }}</span>
+								                        {% endfor %}
+								                    </div>
+								                {% endif %}							
+									
+
+										<div class="">
+											<div class="header_txt">
+												{{ form.password.label(class="") }}
+											</div>	
+
+											<div class="signup_form_txt_field_cont">
+												{{ form.password(class="") }}
+											</div>	
+										
+								                {% if form.password.errors %}
+								                    <div class='error'>
+								                        {% for error in form.password.errors %}
+								                            <span>{{ error }}</span>
+								                        {% endfor %}
+								                    </div>
+								                {% endif %}
+								             </div>
+
+											<div class="submit">
+													{{ form.submit }}
+											</div>
+											{{ form.remember.label }}
+											{{ form.remember }}
+								</form>
+						</div>
+
+			</div>
+{% endblock content %}

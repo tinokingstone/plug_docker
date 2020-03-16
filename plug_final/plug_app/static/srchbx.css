@@ -1,0 +1,155 @@
+.srchCont{
+background-color: ;
+width: 100%;
+height: 100vh;
+ margin-left: ;
+ background-image: url('https://source.unsplash.com/collection/1103088/1600x900');
+background-size: cover;
+display: inline-block;
+float: left;
+overflow: auto;
+
+}
+.srchblock{
+	width: 60%;
+	margin: auto;
+}
+
+
+.banner_slogan{
+	font-size: 105px;
+	font-family: "CircularStd-Bold",serif;
+	color: white;
+	margin-top:  150px;
+	width: 100%;
+}
+#srchbox{
+	width: 100%;
+	height: 0px;
+	overflow: hidden;
+}
+#srchbox.open{
+	width: 100%;
+	height: 900px;
+	overflow: hidden;
+}
+.srchbx{
+	width: 97%;
+	margin: 0;
+	height: 60px;
+	background-color: white;
+	border-radius: 5px;
+	 border-style: solid;
+ 	 border-width: 0.5px;
+	overflow: hidden;
+	border: solid 1px #E5E5E5;
+	
+	font-family: "arial",serif;
+	font-size: 20px;
+	color: #494949;
+	box-shadow:0px 0px 10px rgba(0,0,0,0.1);
+	padding-left: 5%;
+	display: inline-block;
+	float: left;
+}
+
+.suggestionsTtl{
+	display: inline-block;
+	float: left;
+	width: auto;
+	height: auto;
+	margin-top: 5px;
+	margin-right: 5px;
+	color: white;
+}
+.suggestionRslt{
+	width: auto;
+	height: auto;
+	float: left;
+	border-radius: 5px;
+	border: 1px solid white;
+	background-color: ;
+	margin-right:5px;
+	padding: 5px;
+	font-size: 15px;
+	font-family: "CircularStd-Bold",serif;
+	color: white;
+}
+
+
+.suggestionRslt:hover{
+	width: auto;
+	height: auto;
+	float: left;
+	border-radius: 5px;
+	border: 1px solid white;
+	background-color: #232323;
+	margin-right:5px;
+	padding: 5px;
+	font-size: 15px;
+	font-family: "CircularStd-Bold",serif;
+	color: white;
+}
+
+
+.suggestionsCont{
+	width: 100%;
+	height: 30px;
+	background-color: ;
+	display: inline-block;
+	float: left;
+	margin: 10px;
+	 font-family: "CircularStd-Bold",serif;
+	 color: #232323;
+
+
+}
+
+.TXTmainTitle1BG{
+	width: 100%;
+	height:20px;
+	background-color: white;
+	display: inline-block;
+	float: left;
+	opacity: 0.2;
+	padding-left: 20px;
+}
+
+.TXTmainTitle1{
+	width: auto;
+	height: auto;
+	float: left;
+	border-radius: 5px;
+	background-color: ;
+	margin-right:5px;
+	padding: 5px;
+	font-size: 10px;
+	font-family: "CircularStd-Bold",serif;
+	color: white;
+	margin-top: -20px;
+	z-index: 1;
+	position: relative;
+}
+.yourAreaContt{
+	width: 100%;
+	height:auto;
+	background-color: ;
+	display: inline-block;
+	float: left;
+	opacity: 1;
+	padding: 10px;
+	border-radius: 2.5px;
+	margin-top: -210px;
+	position: relative;
+}
+
+.yourAreaConttBG{
+	width: 100%;
+	height:190px;
+	background-color: white;
+	display: inline-block;
+	float: left;
+	opacity: 0.2;
+	padding: 10px;
+	border-radius: 2.5px;
+}

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='hdrtop.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='srchbx.css') }}">
+	
+	{% if title %}
+		<title>Plug.com - {{ title }} </title>
+	{% else %}
+		<title>Plug.com</title>
+	{% endif %}
+</head>
+
+
+	<div id="headerBar">
+							<a href="index.php">
+								<div id="plug_logo"></div>
+							</a> 					
+			{% if current_user.is_authenticated %}
+				<h3 class="navBtn">{{ current_user.username }}</h3>
+				<a href="{{ url_for('account') }}" class="navBtn">account</a>
+				<a href="{{ url_for('logout') }}" class="navBtn">logout</a>
+			{% else %}
+
+			{% endif %}
+						
+							<div id="menu_icons"> 
+										<div id="profile_icon_cont">
+											<div id="profile_icon"></div>
+										</div>
+							</div>
+							
+
+						<div id="log_in_form_container">
+								<div id="log_in_form">
+									<div class="form_title2" id="top_bar"> <div class="form_title2_cont">Enter your details</div></div>
+
+ 	
+
+
+
+
+								<div class="form_title">Create an account: <a href="signup.php">Sign up</a></div>
+							</div>
+						</div>
+							
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	<div class="topNavBar">
+		<div class="navBtnCont">
+
+			{% if current_user.is_authenticated %}
+				<a href="{{ url_for('home') }}" class="navBtn">Home</a>
+				<a href="{{ url_for('search') }}" class="navBtn">Search</a>
+				<a href="{{ url_for('home') }}" class="navBtn">My Profile</a>
+
+			{% else %}
+				<a href="{{ url_for('register') }}" class="navBtn">register</a>
+				<a href="{{ url_for('search') }}" class="navBtn">Search</a>
+				<a href="{{ url_for('login') }}" class="navBtn">login</a>
+			{% endif %}
+
+		</div>
+
+			
+	</div>
+
+<div class="topNavBarBG">
+		
+</div>
+	</div>
+
+
+
+
+	<script type="text/javascript">
+					////////////////ON BUTTON CLICK, CHANGE//////...
+				var content = document.getElementById("log_in_form_container");
+				var button = document.getElementById("profile_icon");
+							button.onclick = function(){
+							if(content.className== "open"){
+							content.className = "" ;
+							}else{
+							content.className = "open";
+							}
+
+							};
+
+				////////////////////////SIGN UP FORM///////////////////////////
+				var sign_up_form_cont = document.getElementById("sign_up_form_cont");
+				var sign_up_form = document.getElementById("sign_up_form");
+				var sign_up_btn = document.getElementById("sign_up_btn");
+
+						sign_up_btn.onclick = function(){
+
+							if(sign_up_form.className== "open"){
+							sign_up_form.className = "";
+							sign_up_form_cont.className = ""
+
+							}else{
+							sign_up_form.className = "open"
+							sign_up_form_cont.className = "open";
+							}
+
+							};
+
+				/////////////////////////////////////////////////////////////
+				var sign_up_form_cont = document.getElementById("sign_up_form_cont");
+	</script>
+
+
+<body>
+		<div class="Super_container">
+			
+
+		{% with messages = get_flashed_messages(with_categories=true) %}
+				{% if messages %}
+					{% for category, message in messages %}
+						<div class="alert alert={{ category }}"></div>
+						{{ message }}
+					{% endfor %}
+				{% endif %}
+		{% endwith %}
+				
+			{% block content %} 
+
+
+
+			{% endblock content %}
+	</div>
+
+  </body>
+
+ </html>

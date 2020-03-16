@@ -1,0 +1,137 @@
+{% extends "layout_main.html" %}
+{% block content %}
+
+
+			<div id="background">
+
+
+				<div id="sign_up_form_cont">
+
+								<div id="sign_up_form">
+										<div id="sign_up_form_header">
+											<div id="signup_header_txt">Profile creation</div>
+											<div id="signup_p_icon"></div>
+										</div>					
+					
+						<form action="includes/signup.inc.php" method="post" enctype="multipart/form-data" >
+
+								<div id="signup_form_img_upload_cont">
+												<div id="signup_form_profpic_bg"> 	<div id="sign_up_form_title">Please upload a profile picture.</div>  </div>
+												<div id="signup_form_prof_pic"> 
+
+	    												<div class="upldImg">  <img id="blah" src="#" alt=""  class="signup_form_prof_pic" />     </div> 
+														<div class="imgBtn">  <input  type='file' name="file" onchange="readURL(this);"  class="sign_up_btn_cont" />  </div> 
+												 </div>
+								</div>
+
+							
+
+							<div class="signup_form_txt_field_cont2"> <input type="text" name="frstName" placeholder="First name"><br> </div>
+							<div class="signup_form_txt_field_cont2"> <input type="text" name="scndName" placeholder="Surname"><br> </div>
+
+
+							<div class="signup_form_txt_field_cont"> <input type="text" name="uid" placeholder="Username"><br> </div>
+							<div class="signup_form_txt_field_cont"><input type="text" name="Email" placeholder="Email"><br> </div>
+							<div class="signup_form_txt_field_cont"> <input type="password" name="pwd" placeholder="Password"><br> </div>
+							<div class="signup_form_txt_field_cont"> <input type="password" name="pwdrepeat" placeholder="Please repeat password"><br> </div>
+
+						
+
+		
+
+										<div id="agreements_cont">
+											<div class="agreements">By clicking on Sign up, you agree to Plug's  <a class="hyperlink" href="url">Terms and Conditions of Use</a>.  </div>
+											<div class="agreements">To learn more about how Plug collects, uses, shares and protects your personal data please read Plugs's <a class="hyperlink" href="url">Privacy Policy</a>.</div>
+										</div>
+
+
+							<div class="sign_up_btn_cont"> <button type="submit" id="sign_up_btn"  class="btn_text" name="signup_submit">Sign up </button></div>
+
+
+										<div id="already_have_account"> Already have an account?  <a class="hyperlink2" href="url"> Sign up </a> </div>
+
+
+
+
+
+
+
+
+
+						</form>
+
+
+										
+
+					</div>
+
+
+
+					
+
+
+
+
+
+	 			</div>
+
+
+			 </div>
+
+
+	<script type="text/javascript">
+		////////////////ON BUTTON CLICK, CHANGE//////...
+	var content = document.getElementById("log_in_form_container");
+	var button = document.getElementById("profile_icon");
+
+				button.onclick = function(){
+
+				if(content.className== "open"){
+				content.className = "" ;
+				}else{
+				content.className = "open";
+				}
+
+				};
+
+	////////////////////////SIGN UP FORM///////////////////////////
+	var sign_up_form_cont = document.getElementById("sign_up_form_cont");
+	var sign_up_form = document.getElementById("sign_up_form");
+	var sign_up_btn = document.getElementById("sign_up_btn");
+
+			sign_up_btn.onclick = function(){
+
+				if(sign_up_form.className== "open"){
+				sign_up_form.className = "";
+				sign_up_form_cont.className = ""
+
+				}else{
+				sign_up_form.className = "open"
+				sign_up_form_cont.className = "open";
+				}
+
+				};
+
+	/////////////////////////////////////////////////////////////
+	var sign_up_form_cont = document.getElementById("sign_up_form_cont");
+	///////////////////////////////////////////////////////////////////
+
+
+	 function readURL(input) {
+	            if (input.files && input.files[0]) {
+	                var reader = new FileReader();
+
+	                reader.onload = function (e) {
+	                    $('#blah')
+	                        .attr('src', e.target.result)
+	                       
+	                };
+
+	                reader.readAsDataURL(input.files[0]);
+	            }
+	        }
+
+
+	</script>
+
+{% endblock content %}

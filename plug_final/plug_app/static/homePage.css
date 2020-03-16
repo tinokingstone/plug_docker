@@ -1,0 +1,119 @@
+body{
+	overflow: scroll;
+	background-color: white;
+	display: inline-block;
+	float: left;
+}
+
+.mainCont{
+
+}
+
+#hpbg{
+	width: 100%;
+	height: 100vh;
+	background-color: #FAFAFA;  
+	float: left;
+	background-size: 100%;
+	
+	display: flex;
+ 	 justify-content: center;
+ 	 align-items: center;
+}
+.sectionTitle{
+	font-family: "CircularStd-Bold",serif;
+	color: white;
+	font-size: 18px;
+}
+
+.hmbannersec{
+	width: 100%;
+	height: 0px;
+	background-color:  ;  
+	display: inline-block;
+	float: left;
+	background-image: url("images/bg4.jpg") ;
+	background-size: 100% ;
+	display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hmbannersec:open{
+	width: 100%;
+	height: 00px;
+	background-color:  ;  
+	display: inline-block;
+	float: left;
+	background-image: url("images/bg4.jpg") ;
+	background-size: 100% ;
+
+	display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.popularProjects{
+	width: 100%;
+	height: 0px;
+	background-color:red;  
+	float: left;
+	display: inline-block;
+	display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+
+
+.homeSections{
+	height: 100vh;
+	float: left;
+	background-size: 100%;
+	display: inline-block;
+}
+
+ 
+
+#leftcont{
+	background-color: ;  
+	width: 500px;
+	height: 100vh;
+	overflow:hidden;
+	justify-content: center;
+
+}
+
+
+#srchBtnCont{
+	background-color: ;  
+	width: 0%;
+	overflow: hidden;
+}
+
+#midcont{
+	background-color: red;  
+	height: 100vh;
+	width: 0px;
+	overflow: hidden;	
+
+
+	 	border-top-left-radius:5px;
+	border-bottom-left-radius: 5px;
+}
+
+#rightcont{
+	background-color: #232323; 
+	width: 00px; 
+	overflow: hidden;
+	height: 100vh;
+}
+
+
+.btmbar{
+	position: fixed;
+	z-index: 1;
+	width: 100%;
+	height: 0px;
+	overflow: hidden;
+}

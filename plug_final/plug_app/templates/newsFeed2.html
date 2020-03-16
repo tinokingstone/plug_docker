@@ -1,0 +1,71 @@
+
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='postCont.css') }}">
+
+			<div id="nfCont">
+
+		 			{% for i in result %}
+
+		 	<div class="photoPostCont">
+							{% for u in user %}
+
+									{% if i.user_id == u.id %}									
+
+
+				<div id="pstInfoTop">
+					<div class="userPhoto">
+						<div >
+							<img class="post_prof_img"  src="{{ profile_pic+u.image_file }}" >
+					</div>
+						</div>
+
+					<div class="userName">
+
+							<div>{{ u.username.upper() }}</div>
+						
+
+
+						 <div class="UsrPstMeta">@{{ u.Firstname +" "+ u.Secondname  }}</div> 
+
+						<div class="skilltagcont">
+							<div class="skilltag">Music Producer</div>
+								<div class="fwdSlash">///</div>
+							<div class="skilltag">3d Artist</div>
+						</div>
+
+
+					</div>
+								{% endif%}
+						{% endfor %}
+				</div>
+
+
+							<div class="contMargin">
+
+
+
+								<div class="post">
+
+						<div id="pstcontent">
+							
+								<img class="post_img" src="{{ image_file+i.Img_id   }}" alt=""  class="signup_form_prof_pic" />
+						</div>
+
+
+						<div class="postTitle">{{ i.Title.upper()  }}<div class="timePostes">{{ i.date_time  }}</div></div>
+						<div class="UsrPstMeta">{{ i.TxtContent   }}</div>
+						<div class="postRequests">{{ i.Requests }}</div>
+
+
+
+
+	
+								</div>
+							</div>
+						</div>
+  
+					{% endfor %}						
+				 							
+					
+			</div>
+
+

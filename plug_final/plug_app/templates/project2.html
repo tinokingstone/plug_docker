@@ -1,0 +1,193 @@
+{% extends "layout_main.html" %}
+{% block content %}
+
+
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='project_creation.css') }}">
+
+<div class="rbg">
+
+	<div id="sign_up_form_cont">
+
+
+		
+		<div id="sign_up_form" >
+
+		<div class="uinfo_container">
+			<div class="upldImgcont">  <img class="upldImg" src="{{ image_file }}" alt=""  class="signup_form_prof_pic" /></div>
+
+			<div class="uinfo">
+					<div class="u_user_name"> {{ current_user.username.upper() }} </div>
+					<div class="u_name">  {{ current_user.Firstname }} {{ current_user.Secondname }} </div>
+					
+					<div class="suggestionRslt"> skilltag </div>
+					<div class="suggestionRslt"> skilltag </div>
+					<div class="suggestionRslt"> skilltag </div>							
+			
+			</div>
+		</div>    
+</div> 
+
+
+
+
+
+		<div id="sign_up_form" >
+
+        <form method='POST' action='' enctype="multipart/form-data">
+            {{ form.hidden_tag() }}
+
+       		<div class="REG_UserInfo">
+
+						<div id="sign_up_form_header">
+								<div id="signup_header_txt"> Profile creation </div>
+								<div id="signup_p_icon"></div>
+						</div>	
+				
+						<div class="">
+							<div class="header_txt">
+								{{ form.Title.label(class="") }}
+							</div>
+
+							<div class="signup_form_txt_field_cont">
+								{{ form.Title(class="") }}
+							</div>
+				                {% if form.Title.errors %}
+				                    <div class='error'>
+				                        {% for error in form.Title.errors %}
+				                            <span>{{ error }}</span>
+				                        {% endfor %}
+				                    </div>
+				                {% endif %}						
+						</div>
+
+								<div class="header_txt">
+									{{ form.cover_img.label(class="") }}
+								</div>
+
+						<div class="cover_img_cont">
+								<div class="header_txt">
+									{{ form.cover_img(class="") }}
+									{% if form.cover_img.errors %}
+										{% for error in form.cover_img.errors %}
+											<span >{{ error }}</span></br>
+										{% endfor %}
+									{% endif%}
+								</div>
+						</div>
+
+
+
+
+						<div class="">
+								<div class="header_txt">
+									{{ form.TxtContent.label(class="") }}
+								</div>
+
+								<div class="signup_form_txt_field_cont">
+									{{ form.TxtContent(class="") }}
+								</div>
+					                {% if form.TxtContent.errors %}
+					                    <div class='error'>
+					                        {% for error in form.TxtContent.errors %}
+					                            <span>{{ error }}</span>
+					                        {% endfor %}
+					                    </div>
+					                {% endif %}	
+
+
+
+					            <div class="attachments_conts">
+
+									<div class="header_txt">
+										{{ form.img.label(class="") }}
+									</div>
+									<div class="header_txt">
+										{{ form.img(class="") }}
+										{% if form.img.errors %}
+											{% for error in form.img.errors %}
+												<span >{{ error }}</span></br>
+											{% endfor %}
+										{% endif%}
+									</div>
+
+
+
+									<div class="header_txt">
+										{{ form.vid.label(class="") }}
+									</div>
+									<div class="header_txt">
+										{{ form.vid(class="") }}
+										{% if form.vid.errors %}
+											{% for error in form.vid.errors %}
+												<span >{{ error }}</span></br>
+											{% endfor %}
+										{% endif%}
+									</div>
+
+
+
+									<div class="header_txt">
+										{{ form.audio.label(class="") }}
+									</div>
+									<div class="header_txt">
+										{{ form.audio(class="") }}
+										{% if form.audio.errors %}
+											{% for error in form.audio.errors %}
+												<span >{{ error }}</span></br>
+											{% endfor %}
+										{% endif%}
+									</div>
+
+
+
+									<div class="header_txt">
+										{{ form.doc.label(class="") }}
+									</div>
+									<div class="header_txt">
+										{{ form.doc(class="submit") }}
+										{% if form.doc.errors %}
+											{% for error in form.doc.errors %}
+												<span >{{ error }}</span></br>
+											{% endfor %}
+										{% endif%}
+									</div>
+
+								</div>					
+						</div>
+
+
+						<div class="Requests">
+								<div class="header_txt">
+									{{ form.Requests.label(class="") }}
+								</div>
+								<div class="header_txt">
+									{{ form.Requests(class="") }}
+									{% if form.vid.errors %}
+										{% for error in form.vid.errors %}
+											<span >{{ error }}</span></br>
+										{% endfor %}
+									{% endif%}
+								</div>
+						</div>
+
+	</div>
+					<div class="submit">
+							{{ form.submit }}
+					</div>
+
+        </form>
+
+			</div>
+		</div>
+</div>
+
+		</div>
+</div>
+
+{% include 'newsFeed2.html' %}
+
+
+
+
+
+{% endblock content %}

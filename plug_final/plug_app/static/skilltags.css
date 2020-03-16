@@ -1,0 +1,11 @@
+.SKILLTAG_FORM{
+	width:90%;
+	padding-top: 40vh;
+}
+
+.existing_tags{
+	width: 500px;
+	height: 300px;
+	border-radius: 2.5px;
+	
+}

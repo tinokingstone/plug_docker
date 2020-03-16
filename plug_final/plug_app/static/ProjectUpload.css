@@ -1,0 +1,399 @@
+
+.rbg{
+	width: 100%;
+	height:100vh;
+	background-color: red; 
+	background-image: url('https://source.unsplash.com/random');
+	background-size: cover;
+	float: left;
+	display: inline-block;
+}
+
+#myVideo {
+ margin:0;
+  right: 0;
+  bottom: 0;
+  width: 50%;
+  float: right;
+	display: inline-block;
+	border-radius: 5px;
+
+}
+
+
+#sign_up_form_cont{
+	width: 20%;
+	min-width: 50%;
+	height: 50vh;
+	margin-left: 15%;
+	margin-top:  20vh;
+	float: left;
+	background-color:; 
+	transition: all 1.5s ease;
+}
+
+#sign_up_form_cont.open{
+	width: 20%;
+	min-width: 350px
+	height: 50vh;
+	margin-left: 15%;
+	margin-top:  15vh;
+	float: left;
+	background-color:; 
+	transition: all 1.5s ease;
+}
+
+#sign_up_form_title{
+	color: white;
+	 font-family: "CircularStd-Bold",serif;
+	 font-size: 20px;
+	 float: left;
+	 display: inline-block;
+	 margin-left: 10px;
+	 margin-top: 2.5px;
+}
+
+#sign_up_form{
+	width: 100%;
+	height: auto;
+	margin-bottom: 15px;
+	float: left;
+	background-color: white;  
+	box-shadow:0px 0px 10px rgba(0,0,0,0.0);
+	padding-bottom: 20px;
+	overflow: hidden;
+	transition: all 1.5s ease;
+	visibility: visible;
+	border-radius: 2.5px; 
+	border: solid 1px #E5E5E5;
+	margin-top: 20px;
+}
+
+#sign_up_form:hover{
+	width: 100%;
+	height: auto;
+	margin-bottom:15px;
+	float: left;
+	background-color: white;  
+	box-shadow:0px 0px 10px rgba(0,0,0,0.10);
+	padding-bottom: 40px;
+	overflow: hidden;
+	transition: all 1.5s ease;
+	visibility: visible;
+}
+
+#sign_up_form_header{
+	width: 100%;
+	height: 20px;
+	background-color: ; 
+	font-size: 11px;
+}
+
+#signup_header_txt{
+	color: white;
+	 font-family: "CircularStd-Bold",serif;
+	 float: left;
+	 display: inline-block;
+	 margin-left: 10px;
+	 margin-top: 2.5px;
+}
+#signup_p_icon{
+	background-color:;
+	display: inline-block;
+	float: right;
+	margin-right: 10px;
+	width:20px;
+	height: 20px;
+	background-image: url("icons/profile_icon.png");
+}
+
+#signup_form_img_upload_cont{
+	width: 93%;
+	margin-left: 3.5%;
+	height: 200px;
+	margin-top: 20px;
+	background-color: #F7F7F7;
+	border-radius: 1px;
+	display: inline-block;
+	float: left;
+	overflow: hidden;
+}
+
+#signup_form_prof_pic{
+	width: 150px;
+	height: 150px;
+	
+	background-color: white;
+	border-radius: 15px;
+
+	overflow: hidden;
+	margin: auto;
+	margin-top: 25px;
+}
+
+.signup_form_txt_field_cont{
+	width: 93%;
+	margin-left: 3.5%;
+	height: 40px;
+	margin-top: px;
+	margin-bottom: 15px;
+	background-color:white;
+	border-radius: 1px;
+	display: inline-block;
+	float: left;
+	overflow: hidden;
+	border-bottom: solid 1px #E5E5E5;
+}
+
+.attachments_conts{
+	width: 93%;
+	margin-left: 3.5%;
+	height: auto;
+	margin-top: 5px;
+	background-color: #F7F7F7;
+	border-radius: 5px;
+	display: inline-block;
+	float: left;
+	overflow: hidden;
+	padding-top: 10px;
+	padding-bottom: 10px;
+
+}
+
+
+.signup_form_txt_field{
+	background-color:#F7F7F7 ;
+}
+
+ #agreements_cont{
+ 	width: 90%;
+ 	height: auto;
+ 	background-color: #303030;
+ 	margin-left: 5%;
+ 	display:inline-block;
+ 	float: left;
+ 	margin-top: 25px;
+ 	padding-bottom: 15px;
+ }
+.hyperlink{
+	color: #1d53ff;
+	 text-decoration: none;
+}
+.hyperlink2{
+	color: #00aa34;
+	 text-decoration: none;
+}
+.agreements{
+	font-family: "arial",serif;
+	font-size: 10px;
+	color: white;
+	margin-top: 10px;
+	text-align: center;
+}
+
+.already_have_account{
+	font-family: "arial",serif;
+	font-size: 10px;
+	color: white;
+	margin-top: 10px;
+	text-align: center;
+	margin-top: 400px;
+}
+
+#sign_up_btn{
+	width: 20%;
+	margin-right: 3.5%;
+	height: 20px;
+	margin-top:15px;
+	background-color: #1db954;
+	border-radius: 2.5px;
+	display: inline-block;
+	float: right;
+	overflow: hidden;
+	color: white;
+	 font-family: "CircularStd-Bold",serif;
+	 font-size: 15px;
+	 cursor:grab;
+	 transition: all 1.5s ease;
+	 border: none;
+
+}
+
+#sign_up_btn:hover{
+	width: 100%;
+	height: 30px;
+	float: left;
+	background-color: #0049ff; 
+	box-shadow:0px 0px 10px rgba(0,0,0,0.40);
+	text-align: center;
+	color: white;
+	border-radius: 5px;
+	font-family: "CircularStd-Bold",serif;
+	cursor:grab;
+	transition: all 1.5s ease;
+}
+#sign_up_btn_cont{
+	width: 20%;
+	margin-right: 3.5%;
+	height: 20px;
+	margin-top:15px;
+	background-color: #00aa34;
+	border-radius: 2.5px;
+	display: inline-block;
+	float: right;
+	overflow: hidden;
+	color: white;
+	 font-family: "CircularStd-Bold",serif;
+	 font-size: 15px;
+	 cursor:grab;
+	 transition: all 1.5s ease;
+	 border: none;
+}
+.btn_text{
+font-family: "CircularStd-Bold",serif;
+margin-top: 6px;
+}
+
+#submit{
+	width: 20%;
+	margin: auto;
+	height: 20px;
+	
+	background-color: #00aa34;
+	border-radius: 2.5px;
+	display: inline-block;
+	float: right;
+	overflow: hidden;
+	color: white;
+	 font-family: "CircularStd-Bold",serif;
+	 font-size: 15px;
+	 cursor:grab;
+	 transition: all 1.5s ease;
+	 border: none;
+}
+
+.header_txt{
+	color: white;
+	 font-family: "CircularStd-Bold",serif;
+	 float: left;
+	 display: inline-block;
+	margin-left: 3.5%;
+	 margin-top: 5px;
+	 font-size: 9px;
+	 color:#282828 ; 
+}
+
+input[type=text] {
+    width: 100%;
+    height: 100% ;
+    margin-left: 0;
+    background-color:white ;  
+    border-style: hidden;
+    padding-left: 10px;  
+     color: black;
+      font-family: "CircularStd-Bold",serif;
+     font-size: 20px;
+	
+}
+
+
+
+input[type=password] {
+    width: 100%;
+    height: 100% ;
+    margin-left: 0;
+    background-color:#E2E2E2 ;  
+    border-style: hidden;
+    padding-left: 10px;  
+    color: white;
+}
+
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+     -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+
+
+
+.content_Container{
+	background-color: ;
+	width: 100%;
+	height: 400px;
+}
+.upldImgcont{
+	width: 80px;
+	height: 80px;
+	
+	float: left;
+	display: inline-block;
+}
+
+.upldImg{
+	border-radius: 2.5px;
+	overflow: hidden;
+	background-color: ;
+	width: 100%;
+}
+
+
+.uinfo{
+	float: left;
+	display: inline-block;
+	margin-left: 10px;
+}
+
+.uinfo_container{
+	width: 100%;
+	height: auto;
+	background-color: ;
+	margin: 3.5%;
+}
+
+.u_user_name{
+	color: black;
+	 font-family: "CircularStd-Bold",serif;
+	 font-size: 20px;
+}
+
+.u_name{
+	color: #E2E2E2;
+	 font-family: "CircularStd-Bold",serif;
+	 font-size: 13px;
+}
+
+
+
+
+.suggestionRslt{
+	width: auto;
+	height: auto;
+	float: left;
+	border-radius: 2.5px;
+	border: 1px solid white;
+	background-color: #232323;
+	margin-top: 10px;
+	margin-right:5px;
+	padding: 5px;
+	font-size: 11px;
+	font-family: "CircularStd-Bold",serif;
+	color: white;
+	cursor:grab;
+
+}
+
+
+.cover_img_cont{
+	width: 93%;
+	height: 200px;
+	background-color: #E2E2E2;
+	display: inline-block;
+	float: left;
+	margin-left: 3.5%;
+	border-radius: 2.5px;
+}

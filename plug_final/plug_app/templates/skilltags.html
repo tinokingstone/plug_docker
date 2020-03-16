@@ -1,0 +1,54 @@
+{% extends "layout.html" %}
+{% block content %}
+
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='skilltags.css') }}">
+
+
+	{% for u in user %}
+		<div>{{ u.username.upper() }}</div>
+	{% endfor %}
+
+
+
+
+
+
+
+    <form method='POST' action=''>
+            {{ form.hidden_tag() }}
+
+	<div class="SKILLTAG_FORM">
+
+				
+						<div class="">
+							<div class="">
+								{{ form.Skilltag.label(class="") }}
+							</div>
+
+							<div class="">
+								{{ form.Skilltag(class="") }}
+							</div>
+				                {% if form.Skilltag.errors %}
+				                    <div class='error'>
+				                        {% for error in form.Skilltag.errors %}
+				                            <span>{{ error }}</span>
+				                        {% endfor %}
+				                    </div>
+				                {% endif %}						
+						</div>
+		</div>
+
+
+
+
+					<div class="submit">
+							{{ form.submit }}
+					</div>
+        </form>
+
+
+	{% for u in user %}
+		<div>{{ u.username.upper() }}</div>
+	{% endfor %}
+
+{% endblock content %}

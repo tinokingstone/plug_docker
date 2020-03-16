@@ -1,0 +1,103 @@
+{% extends "layout_main.html" %}
+{% block content %}
+
+
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='project_creation.css') }}">
+
+<div class="rgb">
+
+		<div id="sign_up_form_cont">
+
+		<div class="uinfo_container">
+			<div class="upldImgcont">  <img class="upldImg" src="{{ image_file }}" alt=""  class="signup_form_prof_pic" /></div>
+
+			<div class="uinfo">
+					<div class="u_user_name"> {{ current_user.username.upper() }} </div>
+					<div class="u_name">  {{ current_user.Firstname }} {{ current_user.Secondname }} </div>
+		
+						{% for s in allSkill %}	
+							{% if s.user_id == current_user.id  %}
+								<div class="suggestionRslt">{{ s.skill }}</div>
+							{% endif %}
+						{% endfor %}
+								
+
+			
+			</div>
+		</div>    
+
+<div id="sign_up_form" >
+    <div class="skillCont">
+    	<div  class="u_name">Your skill Tags</div>
+		{% for s in allSkill %}	
+			{% if s.user_id == current_user.id  %}
+				<div class="suggestionRslt">{{ s.skill }}</div>
+			{% endif %}
+		{% endfor %}
+	</div>    
+</div>    
+
+
+
+
+<div id="sign_up_form" >
+    <div class="skillCont">
+    	<div  class="u_name">All Skilltags  </div>
+		{% for i in allSkill %}	
+				<div class="suggestionRslt2">{{ i.skill }}</div>
+		{% endfor %}
+	</div>    
+</div>    
+
+
+		<div id="sign_up_form" >
+
+        <form method='POST' action='' enctype="multipart/form-data">
+            {{ form.hidden_tag() }}
+
+       		<div class="REG_UserInfo">
+
+						<div id="sign_up_form_header">
+								<div id="signup_header_txt"> Profile creation </div>
+								<div id="signup_p_icon"></div>
+						</div>	
+				
+
+						<div class="">
+							<div class="header_txt">
+								{{ form.skill.label(class="") }}
+							</div>
+
+							<div class="signup_form_txt_field_cont">
+								{{ form.skill(class="") }}
+							</div>
+				                {% if form.skill.errors %}
+				                    <div class='error'>
+				                        {% for error in form.skill.errors %}
+				                            <span>{{ error }}</span>
+				                        {% endfor %}
+				                    </div>
+				                {% endif %}						
+						</div>
+
+					<div class="submit">
+							{{ form.submit }}
+					</div>
+
+				</div>
+
+
+        </form>
+
+			</div>
+		</div>
+</div>
+
+		</div>
+</div>
+
+
+
+
+
+{% endblock content %}

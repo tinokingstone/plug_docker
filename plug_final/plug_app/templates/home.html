@@ -1,0 +1,49 @@
+{% extends "layout_main.html" %}
+{% block content %}
+
+
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='homePage.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='postCont.css') }}">
+	
+	<div class="hmbannersec">
+		
+	</div>
+
+	<div class="sectionTitle" style="width: 60%; display: inline-block; float: left; padding-left:12%;  margin-top: 20px;">Recently Posted In Your Area... </div>
+
+	<div class="popularProjects">
+		
+
+	</div>
+
+<div class="mainCont">
+
+<div id="hpbg">
+
+
+ <div class="homeSections" id="leftcont">
+ 			{% include 'newsFeed2.html' %}
+
+ </div>
+
+
+ <div class="homeSections" id="midcont">
+
+ </div>
+
+
+  <div class="homeSections" id="rightcont">
+
+
+  </div>
+
+</div>
+
+	</div>
+
+
+<div class="btmbar">
+
+</div>
+
+{% endblock content %}

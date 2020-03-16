@@ -1,0 +1,39 @@
+{% extends "layout_main.html" %}
+{% block content %}
+
+
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='srchbx.css') }}">
+
+
+<div class="srchCont">
+	<div class="srchblock">
+	<div class="banner_slogan">I Am Looking For A ????</div>
+	<input class="srchbx" type="post" name="srch" placeholder="">
+	<div class="suggestionsCont">
+
+
+	<div class="suggestionsTtl"> Popular : </div> 
+
+		<div class="suggestionRslt">Graphic Design </div> 
+		<div class="suggestionRslt">Graphic Design </div> 
+		<div class="suggestionRslt">Graphic Design </div> 
+		<div class="suggestionRslt">Graphic Design </div> 
+
+	</div>
+
+	<div class="TXTmainTitle1BG"></div>
+	<div class="TXTmainTitle1">PEOPLE IN YOUR AREA</div>
+
+	<div class="yourAreaConttBG">
+	</div>
+	
+	<div class="yourAreaContt">
+		{% include 'peopleInArea.html' %}
+		{% include 'peopleInArea.html' %}
+		{% include 'peopleInArea.html' %}
+		{% include 'peopleInArea.html' %}
+	</div>
+
+</div>
+
+{% endblock content %}
